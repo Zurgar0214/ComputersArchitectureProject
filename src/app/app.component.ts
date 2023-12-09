@@ -43,6 +43,9 @@ export class AppComponent {
 
   private guardarInstruccionesEnMemoria() {
     this.memoria = new Memoria();
+    //this.instruccionesIntroducidas.toUpperCase();
+    //this.instruccionesIntroducidas.replace("TRUE", "1");
+    //this.instruccionesIntroducidas.replace("FALSE", "0");
     let instruccionesArray = this.instruccionesIntroducidas.split('\n');
     instruccionesArray.forEach((instruccion) => {
       this.memoria.agregarInstruccion(instruccion);
@@ -123,6 +126,24 @@ export class AppComponent {
         break;
       case OperacionInstruccion.DIV:
         await this.ejecutarInstruccionMatematica(OperacionInstruccion.DIV, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.AND:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.AND, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.OR:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.OR, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.LESS:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.LESS, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.GREATER:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.GREATER, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.EQUALS:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.EQUALS, operando1, operando2, operando3);
+        break;
+      case OperacionInstruccion.EQUALS:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.EQUALS, operando1, 0, operando2);
         break;
       case OperacionInstruccion.MOVE:
         await this.ejecutarInstruccionMove(operando1, operando2);

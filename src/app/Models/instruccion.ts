@@ -14,6 +14,9 @@ export class Instruccion {
   }
 
   descomponerInstruccion(): void {
+    //this.textoInstruccion.toUpperCase();
+    //this.textoInstruccion.replace("TRUE", "1");
+    //this.textoInstruccion.replace("FALSE", "0");
     let instruccionArray = this.textoInstruccion.split(" ");
     this.operacion = this.obtenerOperacion(instruccionArray[0]);
     this.operando1 = this.obtenerOperando(instruccionArray[1]);
@@ -35,6 +38,18 @@ export class Instruccion {
         return OperacionInstruccion.DIV;
       case "MOVE":
         return OperacionInstruccion.MOVE;
+      case "AND":
+        return OperacionInstruccion.AND;
+      case "OR":
+        return OperacionInstruccion.OR;
+      case "LESS":
+        return OperacionInstruccion.LESS;
+      case "GREATER":
+        return OperacionInstruccion.GREATER;
+      case "EQUALS":
+        return OperacionInstruccion.EQUALS;
+      case "NOT":
+        return OperacionInstruccion.NOT;
       default:
         return undefined;
     }
