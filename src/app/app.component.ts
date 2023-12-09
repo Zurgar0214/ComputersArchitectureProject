@@ -142,11 +142,13 @@ export class AppComponent {
       case OperacionInstruccion.EQUALS:
         await this.ejecutarInstruccionMatematica(OperacionInstruccion.EQUALS, operando1, operando2, operando3);
         break;
-      case OperacionInstruccion.EQUALS:
-        await this.ejecutarInstruccionMatematica(OperacionInstruccion.EQUALS, operando1, 0, operando2);
+      case OperacionInstruccion.NOT:
+        await this.ejecutarInstruccionMatematica(OperacionInstruccion.NOT, operando1, 0, operando2);
         break;
       case OperacionInstruccion.MOVE:
         await this.ejecutarInstruccionMove(operando1, operando2);
+        break;
+
         break;
       default:
         break;
