@@ -97,9 +97,24 @@ textarea {
 .container__body__principal__center__UC,
 .container__body__principal__center__ALU,
 .container__body__principal__center__MBR,
-.container__body__principal__center__IR,
-.container__body__principal__center__AG {
+.container__body__principal__center__IR {
   flex: 1;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.main__memory__register {
+  height: 80%;
+  border: 1px solid black;
+  margin: 3px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.container__body__principal__left__AG {
   margin: 3px;
   display: flex;
   justify-content: center;

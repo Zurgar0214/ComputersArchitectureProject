@@ -19,11 +19,23 @@
 
       <mat-card class="container__body__principal__card" [ngClass]="{'elemento__procesador__activo': memoriaEstaActiva}">
         <mat-card-title>Memoria principal</mat-card-title>
-        <mat-card-content>
+        <mat-card-content class="main__memory__register">
           <div *ngFor="let instruccion of memoria.celdas; index as index">
             {{index+1}} - {{instruccion}}
           </div>
         </mat-card-content>
+        <div class="container__body__principal__left__AG" [ngClass]="{'elemento__procesador__activo': almacenGeneralEstaActivo}">
+          <div>
+            Almacén general
+            <br>
+            <div>
+              Ax: {{almacenGeneral.A}} - Bx: {{almacenGeneral.B}} <br>
+              Cx: {{almacenGeneral.C}} - Dx: {{almacenGeneral.D}} <br>
+              Ex: {{almacenGeneral.E}} - Fx: {{almacenGeneral.F}} <br>
+              Gx: {{almacenGeneral.G}} - Hx: {{almacenGeneral.H}}
+            </div>
+          </div>
+        </div>
       </mat-card>
 
       <div class="container__body__principal__buses">
@@ -79,21 +91,7 @@
             <br>
             {{IR}}
           </div>
-          <div class="container__body__principal__center__AG" [ngClass]="{'elemento__procesador__activo': almacenGeneralEstaActivo}">
-            <div>
-              Almacén general
-              <br>
-              <div>
-                Ax: {{almacenGeneral.A}} - Bx: {{almacenGeneral.B}} <br>
-                Cx: {{almacenGeneral.C}} - Dx: {{almacenGeneral.D}} <br>
-                Ex: {{almacenGeneral.E}} - Fx: {{almacenGeneral.F}} <br>
-                Gx: {{almacenGeneral.G}} - Hx: {{almacenGeneral.H}}
-              </div>
-            </div>
-          </div>
         </div>
-
-
       </div>
 
       <mat-form-field class="container__body__principal__input">
