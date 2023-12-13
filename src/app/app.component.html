@@ -26,7 +26,7 @@
         </mat-card-content>
         <div class="container__body__principal__left__AG" [ngClass]="{'elemento__procesador__activo': almacenGeneralEstaActivo}">
           <div>
-            Almacén general
+            Banco de Registros
             <br>
             <div>
               Ax: {{almacenGeneral.A}} - Bx: {{almacenGeneral.B}} <br>
@@ -68,10 +68,10 @@
               {{MAR+1}}
             </div>
           </div>
-          <div class="container__body__principal__center__UC" [ngClass]="{'elemento__procesador__activo': unidadControlEstaActiva}">
-            Unidad de control
+          <div class="container__body__principal__center__UC tooltip-uc" [ngClass]="{'elemento__procesador__activo': unidadControlEstaActiva}">
+            UC
           </div>
-          <div class="container__body__principal__center__ALU" [ngClass]="{'elemento__procesador__activo': aluEstaActiva}">
+          <div class="container__body__principal__center__ALU tooltip-alu" [ngClass]="{'elemento__procesador__activo': aluEstaActiva}">
             <div>
               <div>
                 <span>{{ALU.operando1}}</span> ***** <span>{{ALU.operando2}}</span>
@@ -81,12 +81,12 @@
               {{ALU.operacionAEjecutar}}
             </div>
           </div>
-          <div class="container__body__principal__center__MBR" [ngClass]="{'elemento__procesador__activo': mbrEstaActivo}">
+          <div class="container__body__principal__center__MBR tooltip-mbr" [ngClass]="{'elemento__procesador__activo': mbrEstaActivo}">
             MBR
             <br>
             {{MBR}}
           </div>
-          <div class="container__body__principal__center__IR" [ngClass]="{'elemento__procesador__activo': irEstaActivo}">
+          <div class="container__body__principal__center__IR tooltip-ir" [ngClass]="{'elemento__procesador__activo': irEstaActivo}">
             IR
             <br>
             {{IR}}
@@ -95,7 +95,7 @@
       </div>
 
       <mat-form-field class="container__body__principal__input">
-        <mat-label>Escribe tu código</mat-label>
+        <mat-label>Comienza a codificar</mat-label>
         <textarea matInput [(ngModel)]="instruccionesIntroducidas"></textarea>
       </mat-form-field>
     </div>

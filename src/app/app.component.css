@@ -103,7 +103,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border-radius: 5%;
+  background: rgb(226, 238, 206);
 }
 
 .main__memory__register {
@@ -131,4 +132,91 @@ textarea {
 .elemento__procesador__activo {
   border: 2px solid #4978EC;
   box-shadow: 0px 0px 11px 0px #4978EC;
+}
+
+/*
+  Tooltip
+*/
+.tooltip-uc {
+  position: relative;
+}
+
+.tooltip-uc::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tooltip-uc:hover::after {
+  content: "Unidad de control";
+  opacity: 1;
+}
+
+.tooltip-alu {
+  position: relative;
+}
+
+.tooltip-alu::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tooltip-alu:hover::after {
+  content: "Unidad aritmética lógica";
+  opacity: 1;
+}
+
+.tooltip-mbr {
+  position: relative;
+}
+
+.tooltip-mbr::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tooltip-mbr:hover::after {
+  content: "Registro buffer de memoria";
+  opacity: 1;
+}
+
+.tooltip-ir {
+  position: relative;
+}
+
+.tooltip-ir::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tooltip-ir:hover::after {
+  content: "Registro de instrucción";
+  opacity: 1;
 }
