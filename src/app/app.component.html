@@ -18,7 +18,7 @@
     <div class="container__body__principal">
 
       <mat-card class="container__body__principal__card" [ngClass]="{'elemento__procesador__activo': memoriaEstaActiva}">
-        <mat-card-title>Memoria principal</mat-card-title>
+        <h1>Memoria principal</h1>
         <mat-card-content class="main__memory__register">
           <div *ngFor="let instruccion of memoria.celdas; index as index">
             {{index+1}} - {{instruccion}}
@@ -38,19 +38,22 @@
         </div>
       </mat-card>
 
-      <div class="container__body__principal__buses">
-        <div class="buses__container">
+      <div class="container__body__principal__buses_dos">
+        <div class="buses__container_dos">
           <div class="directions" [ngClass]="{'elemento__procesador__activo': busDireccionesEstaActivo}"></div>
           <div class="bus_name">Bus de direcciones</div>
         </div>
-        <div>
+      
+        <div class="buses__container_dos">
           <div class="data" [ngClass]="{'elemento__procesador__activo': busDatosEstaActivo}"></div>
           <div class="bus_name">Bus de datos</div>
         </div>
-        <div>
+      
+        <div class="buses__container_dos">
           <div class="control" [ngClass]="{'elemento__procesador__activo': busControlEstaActivo}"></div>
           <div class="bus_name">Bus de control</div>
         </div>
+      
       </div>
 
       <div class="container__body__principal__center">
@@ -68,29 +71,37 @@
               {{MAR+1}}
             </div>
           </div>
-          <div class="container__body__principal__center__UC tooltip-uc" [ngClass]="{'elemento__procesador__activo': unidadControlEstaActiva}">
-            UC
-          </div>
-          <div class="container__body__principal__center__ALU tooltip-alu" [ngClass]="{'elemento__procesador__activo': aluEstaActiva}">
-            <div>
+
+          <div class="pruebas">
+            <div class="container__body__principal__center__UC tooltip-uc" [ngClass]="{'elemento__procesador__activo': unidadControlEstaActiva}">
+              UC
+            </div>
+            <div class="container__body__principal__center__ALU tooltip-alu" [ngClass]="{'elemento__procesador__activo': aluEstaActiva}">
               <div>
-                <span>{{ALU.operando1}}</span> ***** <span>{{ALU.operando2}}</span>
+                <div>
+                  <span>{{ALU.operando1}}</span> ***** <span>{{ALU.operando2}}</span>
+                </div>
+                ALU
+                <br>
+                {{ALU.operacionAEjecutar}}
               </div>
-              ALU
+            </div>
+            <div class="container__body__principal__center__MBR tooltip-mbr" [ngClass]="{'elemento__procesador__activo': mbrEstaActivo}">
+              MBR
               <br>
-              {{ALU.operacionAEjecutar}}
+              {{MBR}}
+            </div>
+            <div class="container__body__principal__center__IR tooltip-ir" [ngClass]="{'elemento__procesador__activo': irEstaActivo}">
+              IR
+              <br>
+              {{IR}}
             </div>
           </div>
-          <div class="container__body__principal__center__MBR tooltip-mbr" [ngClass]="{'elemento__procesador__activo': mbrEstaActivo}">
-            MBR
-            <br>
-            {{MBR}}
-          </div>
-          <div class="container__body__principal__center__IR tooltip-ir" [ngClass]="{'elemento__procesador__activo': irEstaActivo}">
-            IR
-            <br>
-            {{IR}}
-          </div>
+
+          
+
+
+
         </div>
       </div>
 
